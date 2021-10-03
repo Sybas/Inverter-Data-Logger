@@ -16,7 +16,7 @@ class MWTTOutput(PluginLoader.Plugin):
                 client.connect( self.config.get('mqtt', 'host'),
                                 int(self.config.get('mqtt', 'port')), 60)
 
-                client.publish(mqtt_topic + "e_total", msg.e_total)
+                client.publish(mqtt_topic + "e_total", ((((msg.e_today*10)-(int(msg.e_today*10)))/10)+msg.e_total))
                 client.publish(mqtt_topic + "e_today", msg.e_today)
                 client.publish(mqtt_topic + "h_total", msg.h_total)
                 client.publish(mqtt_topic + "ac_power", msg.p_ac(1))
@@ -27,6 +27,7 @@ class MWTTOutput(PluginLoader.Plugin):
 
                 for x in [1,2,3]:
                         client.publish(mqtt_topic + "v_pv" + str(x), msg.v_pv(x))
+                        client.publish(mqtt_topic + "i_pv" + str(x), msg.i_pv(x))
                         client.publish(mqtt_topic + "v_ac" + str(x), msg.v_ac(x))
                         client.publish(mqtt_topic + "i_ac" + str(x), msg.i_ac(x))
                         client.publish(mqtt_topic + "f_ac" + str(x), msg.f_ac(x))
