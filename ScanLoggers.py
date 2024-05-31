@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/srv/venv-mqtt/bin/python
 """Logger search program.
 
 Find an IGEN Wi-Fi kit logger and query the connected inverter(s).
