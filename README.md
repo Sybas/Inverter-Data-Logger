@@ -30,10 +30,13 @@ Owners of a Wifi kit starting with s/n 402xxxxxxx should checkout
 * Install Python (tested at Linux Python-3.12)
 * Git clone the source with `git clone https://github.com/Sybas/Inverter-Data-Logger.git`
 * Create virtual environment `python -m venv /srv/venv-mqtt`
-* Install python libs in the virtual environment `/srv/venv-mqtt`: `pip install six` and if you use MQTT install `pip install paho-mqtt` for PVoutput add: `pip install pytz`
-* Change the first line (called SheBang) in the files `InverterExport.py`, `LiveStats.py` and `InverterServer.py` when:
-    * Installing the virtual environment at a different location: from `#!/srv/venv-mqtt/bin/python3` to `#!/path/to/venv/bin/python3`
-    * Not using a virtual environment or in case of Windows: from `#!/srv/venv-mqtt/bin/python3` to `#!/usr/bin/env python3`
+* Install in the virtual environment (source /srv/venv-mqtt/bin/activate)
+    * python libs `pip install six`
+    * if you use MQTT `pip install paho-mqtt`
+    * and for PVoutput `pip install pytz`
+* NOTE change the first line (called SheBang) in the files `InverterExport.py`, `LiveStats.py` and `InverterServer.py` when:
+    * Installing the virtual environment at a different location: `#!/srv/venv-mqtt/bin/python3` to `#!/path/to/venv/bin/python3`
+    * Not using a virtual environment or in case of Windows (not tested): `#!/srv/venv-mqtt/bin/python3` to `#!/usr/bin/env python3`
 * Copy the `config-org.cfg` to `config.cfg`
 * Change the settings in `config.cfg` (See '[Configuration](#configuration)')
 * Test your settings with `./LiveStats.py`, when successful you should see data from your inverter.
