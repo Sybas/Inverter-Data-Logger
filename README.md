@@ -29,12 +29,15 @@ Owners of a Wifi kit starting with s/n 402xxxxxxx should checkout
 ## Installation and Setup
 * Install Python (tested python-3.12)
 * Git clone the source with `git clone https://github.com/Sybas/Inverter-Data-Logger.git`
-* Create venv environment 'python -m venv /srv/venv-mqtt'
-  * asddfaasdf
-* Install python libs in venv environment '/srv/venv-mqtt': `pip install six` and if you use MQTT install `pip install paho-mqtt` for PVoutput add: `pip install pytz`
+* Create virtual environment `python -m venv /srv/venv-mqtt`
+* Install python libs in the virtual environment `/srv/venv-mqtt`: `pip install six` and if you use MQTT install `pip install paho-mqtt` for PVoutput add: `pip install pytz`
+* When installing the virtual environment at a different location change the first line (called SheBang) in the files `InverterExport.py`, `LiveStats.py` and `InverterServer.py`
+    * `#!/srv/venv-mqtt/bin/python3` > `#!/path/to/venv/bin/python3`
+* When not using a virtual environment at all change the first line in the files `InverterExport.py`, `LiveStats.py` and `InverterServer.py`
+    * `#!/srv/venv-mqtt/bin/python3` > `#!/usr/bin/env python3`
 * Copy the `config-org.cfg` to `config.cfg`
 * Change the settings in `config.cfg` (See '[Configuration](#configuration)')
-* Test your settings with `python LiveStats.py`, when successful you should see data from your inverter.
+* Test your settings with `./LiveStats.py`, when successful you should see data from your inverter.
 * Run the script with `./InverterExport.py` or better set a scheduled task or cronjob. (See '[Setting cronjob](#setting-cronjob)')
 * Or run the server script with `./InverterServer.py`
 
