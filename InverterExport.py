@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/srv/venv-mqtt/bin/python
 """InverterExport program.
 
 Get data from a Wi-Fi kit logger and save/send the data to the defined plugin(s)
