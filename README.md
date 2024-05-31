@@ -27,7 +27,7 @@ Owners of a Wifi kit starting with s/n 402xxxxxxx should checkout
 [Omnikol-PV-Logger by t3kpunk](https://github.com/t3kpunk/Omniksol-PV-Logger).
 
 ## Installation and Setup
-* Install Python (tested python-3.12)
+* Install Python (tested at Linux Python-3.12)
 * Git clone the source with `git clone https://github.com/Sybas/Inverter-Data-Logger.git`
 * Create virtual environment `python -m venv /srv/venv-mqtt`
 * Install python libs in the virtual environment `/srv/venv-mqtt`: `pip install six` and if you use MQTT install `pip install paho-mqtt` for PVoutput add: `pip install pytz`
