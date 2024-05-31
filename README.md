@@ -30,7 +30,7 @@ Owners of a Wifi kit starting with s/n 402xxxxxxx should checkout
 * Install Python (tested python-3.12)
 * Git clone the source with `git clone https://github.com/Sybas/Inverter-Data-Logger.git`
 * Create venv environment 'python -m venv /srv/venv-mqtt'
-* * asddfaasdf
+  * asddfaasdf
 * Install python libs in venv environment '/srv/venv-mqtt': `pip install six` and if you use MQTT install `pip install paho-mqtt` for PVoutput add: `pip install pytz`
 * Copy the `config-org.cfg` to `config.cfg`
 * Change the settings in `config.cfg` (See '[Configuration](#configuration)')
