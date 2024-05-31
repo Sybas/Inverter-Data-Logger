@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/srv/venv-mqtt/bin/python3
 """InverterExport LiveStats
 
 Get data from the inverter logger and output to console. This is a small
