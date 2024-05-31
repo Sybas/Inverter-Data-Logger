@@ -1,7 +1,6 @@
 # Inverter Data Logger
 Inverter Data Logger is a small script for uploading data from a 
-Omnik, Hosola, Goodwe, Solax, Ginlong, Samil, Sofar or Power-One
-Solar inverter, equipped with a wifi module or connected to a Wi-Fi data logger
+Hosola Solar inverter, equipped with a wifi module or connected to a Wi-Fi data logger
 from [iGEN tech](http://solarmanpv.com/index_en.html), to a database, [Domoticz](http://domoticz.com/) 
 and/or to [PVoutput.org](https://pvoutput.org/).
 
@@ -28,14 +27,14 @@ Owners of a Wifi kit starting with s/n 402xxxxxxx should checkout
 [Omnikol-PV-Logger by t3kpunk](https://github.com/t3kpunk/Omniksol-PV-Logger).
 
 ## Installation and Setup
-* Install Python (tested with python-2.7.14 and python-3.6.4)
-* Git clone the source with `git clone https://github.com/XtheOne/Inverter-Data-Logger.git`
-* Install python libs: `pip install six` and if you use MQTT install `pip install paho-mqtt` for PVoutput add: `pip install pytz`
+* Install Python (tested python-3.12)
+* Git clone the source with `git clone https://github.com/Sybas/Inverter-Data-Logger.git`
+* Install python libs in venv environment '/srv/venv-mqtt': `pip install six` and if you use MQTT install `pip install paho-mqtt` for PVoutput add: `pip install pytz`
 * Copy the `config-org.cfg` to `config.cfg`
 * Change the settings in `config.cfg` (See '[Configuration](#configuration)')
 * Test your settings with `python LiveStats.py`, when successful you should see data from your inverter.
-* Run the script with `python InverterExport.py` or better set a scheduled task or cronjob. (See '[Setting cronjob](#setting-cronjob)')
-* Or run the server script with `python InverterServer.py`
+* Run the script with `./InverterExport.py` or better set a scheduled task or cronjob. (See '[Setting cronjob](#setting-cronjob)')
+* Or run the server script with `./InverterServer.py`
 
 ## Configuration
 
