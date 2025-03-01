@@ -1,6 +1,5 @@
 #!/srv/venv-mqtt/bin/python3
 """InverterExport program.
-
 Get data from a Wi-Fi kit logger and save/send the data to the defined plugin(s)
 """
 import socket  # Needed for talking to logger
